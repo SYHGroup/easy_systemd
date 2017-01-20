@@ -1,8 +1,8 @@
 ### Systemd File by simonsmh  
 
- * [vncserver@.service](https://gist.github.com/simonsmh/36217aad5adf3514c87a087ee5017843#file-vncserver-service)  
+ * [vncserver@.service](https://github.com/SYHGroup/easysystemd/blob/master/vncserver%40.service)  
    ```
-   wget https://gist.githubusercontent.com/simonsmh/36217aad5adf3514c87a087ee5017843/raw/vncserver@.service -O /etc/systemd/system/vncserver@.service  
+   wget https://github.com/SYHGroup/easysystemd/raw/master/vncserver%40.service -O /etc/systemd/system/vncserver@.service  
    systemctl enable vncserver@1.service  
    vncserver :1  
    vncserver -kill :1  
@@ -10,20 +10,10 @@
    ```
    TIPS:`1` represents for port number.  
  
- * [shadowsocks-server.service](https://gist.github.com/simonsmh/36217aad5adf3514c87a087ee5017843#file-shadowsocks-server-service)  
+ * [shadowsocks-server.service](https://github.com/SYHGroup/easysystemd/blob/master/shadowsocks-server.service)  
    ```
-   wget 'https://gist.githubusercontent.com/simonsmh/36217aad5adf3514c87a087ee5017843/raw/shadowsocks-server.service' -O /etc/systemd/system/shadowsocks-server.service  
+   wget https://github.com/SYHGroup/easysystemd/raw/master/shadowsocks-server.service -O /etc/systemd/system/shadowsocks-server.service  
    systemctl enable shadowsocks-server.service  
    systemctl start shadowsocks-server.service  
    ```
    TIPS:For shadowsocksR python only.  
-   
- * [shadowsocks-go](https://gist.github.com/simonsmh/36217aad5adf3514c87a087ee5017843#file-shadowsocks-go)
-   ```
-   wget https://gist.githubusercontent.com/simonsmh/36217aad5adf3514c87a087ee5017843/raw/shadowsocks-go -O /etc/init.d/shadowsocks-go
-   chmod a+x /etc/init.d/shadowsocks-go
-   chmod a+x /usr/bin/shadowsocks-server
-   systemctl enable shadowsocks-go
-   ```
-   TIPS:Works with update-rc.d only.
-   
