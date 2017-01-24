@@ -1,0 +1,12 @@
+[Unit]
+Description=Chinadns
+After=network.target
+Wants=network.target
+
+[Service]
+PIDFile=/var/run/chinadns.pid
+ExecStart=/usr/bin/chinadns -s 208.67.222.222:443,8.8.8.8,223.5.5.5 -m -p 5354 -c /etc/chnroute.txt & echo $! > /var/run/chinadns.pid &
+ExecStop=kill `cat /var/run/chinadns.pid`
+
+[Install]
+WantedBy=multi-user.target
