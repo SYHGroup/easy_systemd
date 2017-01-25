@@ -1,7 +1,7 @@
 [Unit]
 Description=Shadowsocks Server
 After=network.target
-Wants=network.target
+
 [Service]
 Type=forking
 PIDFile=/run/shadowsocks/server.pid

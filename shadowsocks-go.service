@@ -1,12 +1,11 @@
 [Unit]
 Description=Shadowsocks-go Server
 After=network.target
-Wants=network.target
+
 [Service]
-Type=forking
-GuessMainPID=yes
-ExecStart=/usr/bin/shadowsocks-server -u -c /etc/shadowsocks-go/config.json &
-ExecStop=kill `cat $MAINPID`
+Type=simple
+User=root
+ExecStart=/usr/bin/shadowsocks-server -u -c /etc/shadowsocks-go/config.json
 
 [Install]
 WantedBy=multi-user.target
