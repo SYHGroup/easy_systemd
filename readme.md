@@ -1,4 +1,4 @@
-## Systemd File by simonsmh  
+## Systemd serivce by SYHGroup  
 
  * [vncserver@.service](https://github.com/SYHGroup/easysystemd/blob/master/vncserver%40.service)  
    ```
