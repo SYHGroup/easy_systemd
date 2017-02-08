@@ -44,7 +44,7 @@
 
 * [go-shadowsocks2.service](https://github.com/SYHGroup/easysystemd/blob/master
 /go-shadowsocks2.service)
-   ```                                                                                wget https://github.com/SYHGroup/easysystemd/raw/master/shadowsocks-server.service -O /etc/systemd/system/go-shadowsocks2.service  
+   ```                                                                                wget https://github.com/SYHGroup/easysystemd/raw/master/go-shadowsocks2.service -O /etc/systemd/system/go-shadowsocks2.service  
    systemctl enable go-shadowsocks2.service  
    systemctl start go-shadowsocks2.service  
    ```
