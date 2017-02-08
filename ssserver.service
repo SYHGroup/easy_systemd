@@ -12,4 +12,4 @@ ExecStart=/usr/local/bin/ssserver --pid-file /var/run/shadowsocks/server.pid -c 
 ExecStop=/usr/local/bin/ssserver --pid-file /var/run/shadowsocks/server.pid -c /etc/shadowsocks/config.json -d stop
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
