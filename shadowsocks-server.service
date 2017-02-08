@@ -1,15 +1,11 @@
 [Unit]
-Description=Shadowsocks Server
+Description=Shadowsocks-go Server
 After=network.target
 
 [Service]
-Type=forking
-PIDFile=/run/shadowsocks/server.pid
-PermissionsStartOnly=true
-ExecStartPre=/bin/mkdir -p /run/shadowsocks
-ExecStartPre=/bin/chown nobody:nogroup /run/shadowsocks
-ExecStart=/usr/local/bin/ssserver --pid-file /var/run/shadowsocks/server.pid -c /etc/shadowsocks/config.json -d start
-ExecStop=/usr/local/bin/ssserver --pid-file /var/run/shadowsocks/server.pid -c /etc/shadowsocks/config.json -d stop
+Type=simple
+User=root
+ExecStart=/usr/bin/shadowsocks-server -u -c /etc/shadowsocks-go/config.json
 
 [Install]
 WantedBy=multi-user.target
