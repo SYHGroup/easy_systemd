@@ -32,7 +32,7 @@
    ```
    wget https://github.com/SYHGroup/easy_systemd/raw/master/chinadns.service -O /etc/systemd/user/chinadns.service  
    systemctl --user enable chinadns.service  
-   systemctl chinadns.service  
+   systemctl start chinadns.service  
    ```
    TIPS: For chinadns-c only.  
 
@@ -56,6 +56,6 @@
    ```
    wget https://github.com/SYHGroup/easy_systemd/raw/master/aria2.service -O /etc/systemd/user/chinadns.service  
    systemctl --user enable aria2.service  
-   systemctl aria2.service  
+   systemctl start aria2.service  
    ```
    TIPS: For Aria2 rpc server only.  
