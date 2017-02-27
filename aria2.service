@@ -6,23 +6,21 @@ After=network.target
 Type=simple
 User=root
 PermissionsStartOnly=true
-ExecStartPre=/bin/touch /var/cache/aria2c.session
-Environment="PASSWD=test" "SESSION=/var/cache/aria2c.session"
-ExecStart=/usr/bin/aria2c -c \
+ExecStartPre=/bin/touch /var/cache/aria2.session
+Environment="PASSWD=test" "SESSION=/var/cache/aria2.session"
+ExecStart=/usr/bin/aria2c --rpc-secret=$PASSWD --input-file=$SESSION --save-session=$SESSION \
 --dir=/root/files/ \
 --enable-rpc=true \
 --rpc-allow-origin-all=true \
 --rpc-listen-all=true \
---rpc-secret=$PASSWD \
 --max-connection-per-server=15 \
 --bt-enable-lpd=true \
 --max-upload-limit=2M \
 --allow-overwrite=true \
---input-file=$SESSION \
---save-session=$SESSION \
 --save-session-interval=60 \
 --peer-id-prefix=-TR2920- \
---user-agent=Transmission/2.92
+--user-agent=Transmission/2.92 \
+-c
 
 [Install]
 WantedBy=default.target
