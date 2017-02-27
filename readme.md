@@ -24,7 +24,7 @@
    ```
    wget https://github.com/SYHGroup/easy_systemd/raw/master/shadowsocks-server.service -O /etc/systemd/user/shadowsocks-server.service  
    systemctl --user enable shadowsocks-server.service  
-   systemctl start shadowsocks-server.service  
+   systemctl --user start shadowsocks-server.service  
    ```
    TIPS: For shadowsocks golang version only.  
 
@@ -32,7 +32,7 @@
    ```
    wget https://github.com/SYHGroup/easy_systemd/raw/master/chinadns.service -O /etc/systemd/user/chinadns.service  
    systemctl --user enable chinadns.service  
-   systemctl start chinadns.service  
+   systemctl --user start chinadns.service  
    ```
    TIPS: For chinadns-c only.  
 
@@ -40,7 +40,7 @@
    ```
    wget https://github.com/SYHGroup/easy_systemd/raw/master/ssserver.service -O /etc/systemd/user/ssserver.service  
    systemctl --user enable ssserver.service  
-   systemctl start ssserver.service  
+   systemctl --user start ssserver.service  
    ```
    TIPS: For shadowsocks python version only.  
 
@@ -48,14 +48,14 @@
    ```
    wget https://github.com/SYHGroup/easy_systemd/raw/master/go-shadowsocks2.service -O /etc/systemd/user/go-shadowsocks2.service
    systemctl --user enable go-shadowsocks2.service
-   systemctl start go-shadowsocks2.service
+   systemctl --user start go-shadowsocks2.service
    ```
    TIPS: For shadowsocks golang version 2 only. You may need to manually edit config in systemd file.
 
 * [aria2.service](https://github.com/SYHGroup/easy_systemd/blob/master/aria2.service)  
    ```
-   wget https://github.com/SYHGroup/easy_systemd/raw/master/aria2.service -O /etc/systemd/user/chinadns.service  
+   wget https://github.com/SYHGroup/easy_systemd/raw/master/aria2.service -O /etc/systemd/user/aria2.service  
    systemctl --user enable aria2.service  
-   systemctl start aria2.service  
+   systemctl --user start aria2.service  
    ```
    TIPS: For Aria2 rpc server only.  
