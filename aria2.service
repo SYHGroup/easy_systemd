@@ -1,5 +1,5 @@
 [Unit]
-Description=Aria2
+Description=Aria2 - The ultra fast download utility
 After=network.target
 
 [Service]
@@ -20,7 +20,8 @@ ExecStart=/usr/bin/aria2c --rpc-secret=$PASSWD --input-file=$SESSION --save-sess
 --save-session-interval=60 \
 --peer-id-prefix=-TR2920- \
 --user-agent=Transmission/2.92 \
--c
+--continue=true \
+--daemon=true
 
 [Install]
 WantedBy=default.target
