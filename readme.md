@@ -51,3 +51,11 @@
    systemctl start go-shadowsocks2.service
    ```
    TIPS: For shadowsocks golang version 2 only. You may need to manually edit config in systemd file.
+
+* [aria2.service](https://github.com/SYHGroup/easy_systemd/blob/master/aria2.service)  
+   ```
+   wget https://github.com/SYHGroup/easy_systemd/raw/master/aria2.service -O /etc/systemd/user/chinadns.service  
+   systemctl --user enable aria2.service  
+   systemctl aria2.service  
+   ```
+   TIPS: For Aria2 rpc server only.  
