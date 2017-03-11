@@ -59,3 +59,11 @@
    systemctl --user start aria2.service  
    ```
    TIPS: For Aria2 rpc server only.  
+
+* [vlmcs.service](https://github.com/SYHGroup/easy_systemd/blob/master/vlmcs.service)  
+   ```
+   wget https://github.com/SYHGroup/easy_systemd/raw/master/vlmcs.service -O /etc/systemd/user/vlmcs.service  
+   systemctl enable vlmcs.service  
+   systemctl start vlmcs.service  
+   ```
+   TIPS: Use www-data user to start the service.  
