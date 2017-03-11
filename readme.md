@@ -62,7 +62,7 @@
 
 * [vlmcs.service](https://github.com/SYHGroup/easy_systemd/blob/master/vlmcs.service)  
    ```
-   wget https://github.com/SYHGroup/easy_systemd/raw/master/vlmcs.service -O /etc/systemd/user/vlmcs.service  
+   wget https://github.com/SYHGroup/easy_systemd/raw/master/vlmcs.service -O /etc/systemd/system/vlmcs.service  
    systemctl enable vlmcs.service  
    systemctl start vlmcs.service  
    ```
