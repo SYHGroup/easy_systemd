@@ -4,7 +4,6 @@ After=syslog.target network.target
 
 [Service]
 Type=simple
-User=root
 PAMName=login
 PIDFile=/root/.vnc/%H:%i.pid
 ExecStart=/usr/bin/vncserver -geometry 1440x900 -alwaysshared -localhost no -depth 24 :%i

@@ -4,7 +4,6 @@ After=network.target
 
 [Service]
 Type=simple
-User=root
 PermissionsStartOnly=true
 Environment="PASSWD=test" "DIR=/root/files/" "SESSION=/var/cache/aria2.session"
 ExecStartPre=/bin/touch $SESSION
@@ -19,7 +18,9 @@ ExecStart=/usr/bin/aria2c --rpc-secret=$PASSWD --input-file=$SESSION --save-sess
 --save-session-interval=60 \
 --peer-id-prefix=-TR2920- \
 --user-agent=Transmission/2.92 \
--c -D
+-c
+Restart=always
+RestartSec=5
 
 [Install]
 WantedBy=default.target

@@ -5,9 +5,7 @@ After=network.target
 [Service]
 Type=simple
 User=nobody
-ExecStart=/usr/bin/vlmcsd \
-	-D \
-	-e
+ExecStart=/usr/bin/vlmcsd -D -e
 
 [Install]
 WantedBy=multi-user.target

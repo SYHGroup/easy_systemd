@@ -4,8 +4,9 @@ After=network.target
 
 [Service]
 Type=simple
+User=nobody
 PermissionsStartOnly=true
 ExecStart=/usr/bin/shadowsocks-server -u -c /etc/shadowsocks-go/config.json
 
 [Install]
-WantedBy=default.target
+WantedBy=multi-user.target
