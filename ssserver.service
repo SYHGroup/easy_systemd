@@ -3,14 +3,8 @@ Description=Shadowsocks Server
 After=network.target
 
 [Service]
-Type=forking
-PIDFile=/run/shadowsocks/server.pid
-User=nobody
-PermissionsStartOnly=true
-ExecStartPre=/bin/mkdir -p /run/shadowsocks
-ExecStartPre=/bin/chown nobody:nogroup /run/shadowsocks
-ExecStart=/usr/local/bin/ssserver --pid-file /var/run/shadowsocks/server.pid -c /etc/shadowsocks/config.json -d start
-ExecStop=/usr/local/bin/ssserver --pid-file /var/run/shadowsocks/server.pid -c /etc/shadowsocks/config.json -d stop
+Type=simple
+ExecStart=/usr/local/bin/ssserver --user nobody -c /etc/shadowsocks/config.json
 
 [Install]
 WantedBy=multi-user.target
