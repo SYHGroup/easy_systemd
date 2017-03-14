@@ -4,9 +4,9 @@ After=network.target
 
 [Service]
 Type=simple
-User=nobody
+User=root
 Environment="SERVERPORT=8388" "CIPHER=AEAD_CHACHA20_POLY1305" "PASSWD=foobar"
-ExecStart=/usr/bin/go-shadowsocks2 -s ss://${CIPHER}:${PASSWD}@:$SERVERPORT
+ExecStart=/usr/bin/go-shadowsocks2 -s ss://${CIPHER}:${PASSWD}@:${SERVERPORT} -verbose
 
 [Install]
 WantedBy=multi-user.target
