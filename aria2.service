@@ -7,7 +7,7 @@ Type=simple
 PermissionsStartOnly=true
 Environment="PASSWD=test" "DIR=/root/files/" "SESSION=/var/cache/aria2.session"
 ExecStartPre=/bin/touch $SESSION
-ExecStart=/usr/bin/aria2c --rpc-secret=$PASSWD --input-file=$SESSION --save-session=$SESSION --dir=$DIR \
+ExecStart=/usr/bin/aria2c --rpc-secret=${PASSWD} --input-file=${SESSION} --save-session=${SESSION} --dir=${DIR} \
 --enable-rpc=true \
 --rpc-allow-origin-all=true \
 --rpc-listen-all=true \
