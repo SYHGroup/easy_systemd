@@ -1,0 +1,14 @@
+[Unit]
+Description=ttyd - Share your terminal over the web
+After=network.target
+
+[Service]
+Type=simple
+PermissionsStartOnly=true
+Environment="COMMAND=bash" "AUTH=test:test"
+ExecStart=/usr/bin/ttyd -i /var/run/ttyd.sock -c ${AUTH} ${COMMAND}
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target

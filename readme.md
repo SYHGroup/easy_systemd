@@ -65,3 +65,13 @@
    systemctl start vlmcsd.service
    ```
    TIPS: Manually install vlmcsd first.
+
+* [ttyd.service](https://github.com/SYHGroup/easy_systemd/blob/master/ttyd.service)
+   ```
+   wget https://github.com/SYHGroup/easy_systemd/raw/master/ttyd.service -O /etc/systemd/user/ttyd.service
+   systemctl --user enable ttyd.service
+   systemctl --user start ttyd.service
+   ```
+   TIPS: For TTYD unix socket server only.
+
+
