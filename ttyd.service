@@ -5,8 +5,8 @@ After=network.target
 [Service]
 Type=simple
 PermissionsStartOnly=true
-Environment="COMMAND=bash" "AUTH=test:test"
-ExecStart=/usr/bin/ttyd -i /var/run/ttyd.sock -c ${AUTH} ${COMMAND}
+Environment="INTERFACE=eth0 " "COMMAND=bash" "AUTH=test:test"
+ExecStart=/usr/bin/ttyd -i ${INTERFACE} -c ${AUTH} ${COMMAND}
 Restart=always
 RestartSec=5
 
