@@ -5,7 +5,7 @@ After=network.target
 [Service]
 Type=simple
 PermissionsStartOnly=true
-Environment="INTERFACE=eth0 " "COMMAND=bash" "AUTH=test:test"
+Environment="INTERFACE=lo" "COMMAND=bash" "AUTH=test:test"
 ExecStart=/usr/bin/ttyd -i ${INTERFACE} -c ${AUTH} ${COMMAND}
 Restart=always
 RestartSec=5
