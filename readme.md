@@ -4,8 +4,6 @@
    ```
    wget https://github.com/SYHGroup/easy_systemd/raw/master/vncserver%40.service -O /etc/systemd/system/vncserver@.service
    systemctl enable vncserver@1.service
-   vncserver :1
-   vncserver -kill :1
    systemctl start vncserver@1.service
    ```
    TIPS: `1` represents for port number.
@@ -17,14 +15,6 @@
    systemctl start vncserver@5901.service
    ```
    TIPS: `5901` represents for port number. For lightdm only.
-
- * [shadowsocks-server.service](https://github.com/SYHGroup/easy_systemd/blob/master/shadowsocks-server.service)
-   ```
-   wget https://github.com/SYHGroup/easy_systemd/raw/master/shadowsocks-server.service -O /etc/systemd/system/shadowsocks-server.service
-   systemctl enable shadowsocks-server.service
-   systemctl start shadowsocks-server.service
-   ```
-   TIPS: For shadowsocks golang version only.
 
  * [chinadns.service](https://github.com/SYHGroup/easy_systemd/blob/master/chinadns.service)
    ```
@@ -42,6 +32,15 @@
    ```
    TIPS: For shadowsocks python version only.
 
+
+ * [shadowsocks-server.service](https://github.com/SYHGroup/easy_systemd/blob/master/shadowsocks-server.service)
+   ```
+   wget https://github.com/SYHGroup/easy_systemd/raw/master/shadowsocks-server.service -O /etc/systemd/system/shadowsocks-server.service
+   systemctl enable shadowsocks-server.service
+   systemctl start shadowsocks-server.service
+   ```
+   TIPS: For shadowsocks golang version only.
+
 * [go-shadowsocks2.service](https://github.com/SYHGroup/easy_systemd/blob/master/go-shadowsocks2.service)
    ```
    wget https://github.com/SYHGroup/easy_systemd/raw/master/go-shadowsocks2.service -O /etc/systemd/system/go-shadowsocks2.service
@@ -57,21 +56,3 @@
    systemctl --user start aria2.service
    ```
    TIPS: For Aria2 rpc server only.
-
-* [vlmcsd.service](https://github.com/SYHGroup/easy_systemd/blob/master/vlmcsd.service)
-   ```
-   wget https://github.com/SYHGroup/easy_systemd/raw/master/vlmcs.service -O /etc/systemd/system/vlmcsd.service
-   systemctl enable vlmcsd.service
-   systemctl start vlmcsd.service
-   ```
-   TIPS: Manually install vlmcsd first.
-
-* [ttyd.service](https://github.com/SYHGroup/easy_systemd/blob/master/ttyd.service)
-   ```
-   wget https://github.com/SYHGroup/easy_systemd/raw/master/ttyd.service -O /etc/systemd/user/ttyd.service
-   systemctl --user enable ttyd.service
-   systemctl --user start ttyd.service
-   ```
-   TIPS: For TTYD unix socket server only.
-
-
