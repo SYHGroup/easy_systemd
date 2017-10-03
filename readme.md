@@ -1,5 +1,7 @@
 ## Systemd serivce by SYHGroup  
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](./LICENSE)  
+
  * [vncserver@.service](https://github.com/SYHGroup/easy_systemd/blob/master/vncserver%40.service)
    ```
    wget https://github.com/SYHGroup/easy_systemd/raw/master/vncserver%40.service -O /etc/systemd/system/vncserver@.service
